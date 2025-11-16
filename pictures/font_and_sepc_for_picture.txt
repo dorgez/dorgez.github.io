@@ -1,0 +1,11 @@
+font is Berthold Block
+white color
+size 263 in Canva
+font style:
+Shadow
+Offset: 72
+Direction:-50
+Blur:33
+Transparcy: 70
+effect color: black
+dimensions 1280 x 720
