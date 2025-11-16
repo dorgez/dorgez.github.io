@@ -10,15 +10,15 @@ image: /pictures/ashkelon_pics/ashkelon_banner.jpg
 
 ---
 # Case Study: Rain Event Analysis- Ashkelon Flooding
-## November 14, 2025 - Hydrological Forensics
+## November 14, 2025 - Hydrological analysis
 
-> **Alert:** This analysis documents an extreme rainfall event that caused significant urban flooding in Ashkelon. Peak intensity reached 15.3 mm in 10 minutes (91.8 mm/hr equivalent).
+>  This analysis documents an extreme rainfall event that caused significant urban flooding in Ashkelon. Peak intensity reached 15.3 mm in 10 minutes (91.8 mm/hr equivalent).
 
 ## Executive Summary
 
-On November 14, 2025, Ashkelon Port experienced a rainfall event that overwhelmed urban drainage systems and caused widespread flooding. The event delivered **68.9 mm of rain** with the majority falling in just 2.5 hours, peaking at an extraordinary intensity that exceeded the design capacity of most urban infrastructure.
+On November 14, 2025, Ashkelon Port experienced a rainfall event that overwhelmed urban drainage systems and caused widespread flooding. The event delivered **68.9 mm of rain** with the majority falling in just 2.0 hours, peaking at an extraordinary intensity that exceeded the design capacity of most urban infrastructure.
 
-### 🔴 Critical Metrics at a Glance
+### Data at a Glance
 
 | Metric                    | Value      |
 | ------------------------- | ---------- |
@@ -27,7 +27,9 @@ On November 14, 2025, Ashkelon Port experienced a rainfall event that overwhelme
 | **Peak Hourly Rate**      | 91.8 mm/hr |
 | **Main Event Duration**   | 2.0 hours  |
 | **Time to Peak**          | 60 minutes |
-|                           |            |
+
+
+
 ### Observed vs Design Rainfall Depths (mm)
 
 | Duration    | Observed | 2-yr | 5-yr | 10-yr | 20-yr | 25-yr | 50-yr | 100-yr | 200-yr | 500-yr | Est. Return Period |
@@ -50,20 +52,20 @@ On November 14, 2025, Ashkelon Port experienced a rainfall event that overwhelme
 
 <img src="/pictures/ashkelon_pics/rain_analysis_plots.png" width="300" height="200" alt="figure3">
 
-![Figure 3: Comprehensive analysis showing hyetograph, cumulative rainfall, intensity patterns, probability distribution, hourly distribution, storm phases, intensity classification, and mass curve analysis](/pictures/ashkelon_pics/rain_analysis_plots.png) 
-*Figure 3: Comprehensive analysis showing hyetograph, cumulative rainfall, intensity patterns, probability distribution, hourly distribution, storm phases, intensity classification, and mass curve analysis (click to make the picture bigger)*
+
+*Figure 3: Comprehensive analysis showing hyetograph, cumulative rainfall, intensity patterns, probability distribution, hourly distribution, storm phases, intensity classification, and mass curve analysis **(click to make the picture bigger)***
 
 
 ## Detailed Hydrological Analysis
 
-### 3. Why This Event Caused Severe Flooding
+### Why This Event Caused Severe Flooding
 
 #### Extreme Short-Duration Intensity
 The 15.3 mm falling in just 10 minutes exceeds most urban drainage design standards, which typically accommodate 10–20-year events. This intensity is equivalent to **91.8 mm/hr**.  
 However, the peak burst did not occur in isolation. The dataset shows a **rapid buildup of rainfall in the 20–30 minutes leading up to the peak**, including consecutive intensities of **6.3 mm**, **13.1 mm**, and **7.4 mm**, which already saturated surfaces and primed the drainage system before the extreme 10-minute spike.
 Following the peak, the system continued receiving significant amounts—**10.5 mm**, **7.1 mm**, and additional rainfall over the next half hour—meaning the runoff volume accumulated over an extended period. This combination of **pre-peak loading**, **an extreme short-duration maximum**, and **post-peak continuation** creates a compounded hydrological burden far greater than what is captured by only analyzing the 10-minute intensity itself.
 
-#### Rapid Rate of Rise
+#### Rapid Rate 
 Intensity increased from 0.6 to 15.3 mm/10min in just 30 minutes, providing no time for:
 - Drainage systems to adapt or pre-empty
 - Emergency response mobilization
@@ -101,19 +103,6 @@ The analysis reveals that current urban drainage infrastructure, designed for 5-
 **Standards Referenced:** Israeli drainage design guidelines, WMO intensity classifications
 
 ---
-
-*For the full interactive analysis and raw data, please contact the hydrological analysis team.*
-
-
-![flood1](/pictures/ashkelon_pics/Pasted%20image%2020251114153408.png) 
-
-
-
-![flood2](/pictures/ashkelon_pics/Pasted%20image%2020251114153502.png) 
-
-
-
-![flood3](/pictures/ashkelon_pics/Pasted%20image%2020251114153844.png)
 
 
 <img src="/pictures/ashkelon_pics/Pasted%20image%2020251114153408.png" width="300" height="200" alt="flood1">
