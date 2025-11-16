@@ -30,7 +30,7 @@ On November 14, 2025, Ashkelon Port experienced a rainfall event that overwhelme
 
 
 
-### Observed vs Design Rainfall Depths (mm)
+### Observed vs Design IDF table with Est. return period on last column
 
 | Duration    | Observed | 2-yr | 5-yr | 10-yr | 20-yr | 25-yr | 50-yr | 100-yr | 200-yr | 500-yr | Est. Return Period |
 | ----------- | -------- | ---- | ---- | ----- | ----- | ----- | ----- | ------ | ------ | ------ | ------------------ |
