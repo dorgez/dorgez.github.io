@@ -97,9 +97,13 @@ However, when we analyze the entire historical data from the Zichron Yaakov rain
 ### Log-normal Distribution
 - Probability Distribution Function:
 
+
 $$
 \text{}f(x) = \frac{1}{x\sigma\sqrt{2\pi}} \exp\left(-\frac{(\ln x - \mu)^2}{2\sigma^2}\right)
 $$
+
+WORKO PLEASe
+
 
 where:
 
