@@ -5,7 +5,7 @@ date: 2024-12-19 00:00:00 +0800
 categories: [Hydrology, Climate change, Python]
 tags: [hydrology,python,code,climate]
 image: /pictures/4-hours-duration/Copy of Copy of Hydrology.png
-math:true
+
 
 
 
@@ -106,13 +106,17 @@ $$
 $$
 
 
-$$
-f(x) = \frac{1}{x\sigma\sqrt{2\pi}} \exp\left(-\frac{(\ln x - \mu)^2}{2\sigma^2}\right)
-$$
+
 
 
 
 where:
+
+
+$$
+\text{}f(x) = \frac{1}{x\sigma\sqrt{2\pi}} \exp\left(-\frac{(\ln x - \mu)^2}{2\sigma^2}\right)
+$$
+
 
 - μ = mean of the natural logarithm of the data
 - σ = standard deviation of the natural logarithm of the data
