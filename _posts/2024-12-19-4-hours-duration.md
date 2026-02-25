@@ -106,26 +106,7 @@ $$
 
 $$
 
-
-
-
-
-
 where:
-
-
-$$
-\text{}f(x) = \frac{1}{x\sigma\sqrt{2\pi}} \exp\left(-\frac{(\ln x - \mu)^2}{2\sigma^2}\right)
-$$
-
-XYZ
-
-$$
-f(x) = \frac{1}{x\sigma\sqrt{2\pi}} 
-\exp\left(-\frac{(\ln x - \mu)^2}{2\sigma^2}\right)
-$$
-
-XYZ
 
 - μ = mean of the natural logarithm of the data
 - σ = standard deviation of the natural logarithm of the data
