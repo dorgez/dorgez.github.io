@@ -6,6 +6,7 @@ categories: [Code, python, Hydrology]
 tags: [code, hydrology]
 image: /pictures/predict-rain-hour/post_picture.png
 math: true
+mermaid: true
 
 
 ---
