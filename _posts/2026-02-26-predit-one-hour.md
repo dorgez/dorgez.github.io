@@ -225,10 +225,10 @@ C["Test<br/>2023-07-01 → 2025-08-30<br/>10.9%"]
 
 A --> G1 --> B --> G2 --> C
 
-classDef train fill:#E3F2FD,stroke:#1E88E5,stroke-width:2px;
-classDef val fill:#FFF8E1,stroke:#F9A825,stroke-width:2px;
-classDef test fill:#E8F5E9,stroke:#43A047,stroke-width:2px;
-classDef gap fill:#FAFAFA,stroke:#9E9E9E,stroke-dasharray: 5 5;
+classDef train fill:#E3F2FD,stroke:#1E88E5,stroke-width:2px,color:#000000,font-weight:bold;
+classDef val fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000000,font-weight:bold;
+classDef test fill:#E8F5E9,stroke:#43A047,stroke-width:2px,color:#000000,font-weight:bold;
+classDef gap fill:#FAFAFA,stroke:#9E9E9E,stroke-dasharray:5 5,color:#000000,font-weight:bold;
 
 class A train;
 class B val;
