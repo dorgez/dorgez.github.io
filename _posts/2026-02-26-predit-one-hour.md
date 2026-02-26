@@ -159,11 +159,8 @@ linkStyle default stroke-width:3px
 **Phase 2 -- Cross-Validation Rules:** Six physically-impossible combination rules were applied (e.g., TD > TDmax, TDmin > TDmax, nighttime TD > 40°C). An additional 251 rows were flagged.
 
 
-!["figure number 1"](/pictures/predict-rain-hour/nan_heatmap_by_year.png)
 
-
-
-!["figure number 2"](/pictures/predict-rain-hour/nan_vs_rain.png)
+!["figure number 1"](/pictures/predict-rain-hour/nan_vs_rain.png)
 
 
 A three-step strategy was designed to **preserve all rainy observations** (critical for rare-event modeling):
@@ -196,10 +193,10 @@ Starting from 7 base variables (with WD decomposed into WD_sin and WD_cos), **91
 
 **Leakage prevention:** All rain-derived features are computed on `Rain.shift(1)` to ensure the current timestep's rainfall (which contributes to the target) is never included as a feature.
 
-!["figure number 3"](/pictures/predict-rain-hour/feature_correlation_heatmap.png)
+!["figure number 2"](/pictures/predict-rain-hour/feature_correlation_heatmap.png)
 
 
-!["figure number 4"](/pictures/predict-rain-hour/top20_feature_correlations.png)
+!["figure number 3"](/pictures/predict-rain-hour/top20_feature_correlations.png)
 
 
 
@@ -255,6 +252,38 @@ The 6-hour purge gap matches the maximum lag of 36 steps (6 hours), ensuring no 
 
 ## 4. Logistic Regression Model
 
+Logistic Regression is a linear classification algorithm that models the probability of a binary outcome as a function of input features. Rather than predicting the class directly, it estimates the probability that a given observation belongs to the positive class (extreme rainfall) by passing a linear combination of features through the sigmoid function. The model learns a weight (coefficient) for each feature, quantifying its contribution to the prediction. During training, these weights are optimized by minimizing a regularized cross-entropy loss function, which penalizes both incorrect predictions and overly large coefficients to prevent overfitting.
+
+**Model Formula:**
+
+$$P(y = 1 \mid \mathbf{x}) = \sigma(z) = \frac{1}{1 + e^{-z}}, \quad \text{where} \quad z = \mathbf{w}^\top \mathbf{x} + b = \sum_{j=1}^{p} w_j x_j + b$$
+
+| Symbol | Definition |
+|--------|------------|
+| $P(y = 1 \mid \mathbf{x})$ | Predicted probability that the observation $\mathbf{x}$ belongs to the positive class (extreme rainfall within the next hour) |
+| $\sigma(z)$ | The **sigmoid** (logistic) function, which maps any real-valued $z$ to the range $(0, 1)$ |
+| $z$ | The **logit** -- the linear combination of all input features before the sigmoid transformation |
+| $\mathbf{x} = [x_1, x_2, \ldots, x_p]$ | The **feature vector** of a single observation, containing all $p = 91$ engineered features |
+| $\mathbf{w} = [w_1, w_2, \ldots, w_p]$ | The **weight (coefficient) vector** -- one learned weight per feature, representing its contribution to the prediction |
+| $b$ | The **bias (intercept)** term, representing the model's baseline log-odds when all features are zero (learned value: $b = -2.0022$) |
+| $p$ | The number of input features ($p = 91$) |
+
+**Training Objective (L2-Regularized Cross-Entropy Loss):**
+
+$$\mathcal{L}(\mathbf{w}, b) = -\sum_{i=1}^{N} \left[ c_{y_i} \cdot y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right] + \frac{1}{2C} \|\mathbf{w}\|_2^2$$
+
+| Symbol | Definition |
+|--------|------------|
+| $N$ | Total number of training samples |
+| $y_i$ | True label of sample $i$ (0 = normal, 1 = extreme) |
+| $\hat{y}_i$ | Predicted probability $P(y_i = 1 \mid \mathbf{x}_i)$ |
+| $c_{y_i}$ | Class weight for sample $i$'s true class (1.0 for normal, ~164.3 for extreme), compensating for class imbalance |
+| $C$ | **Inverse regularization strength** -- smaller $C$ applies stronger L2 penalty on the weights (selected value: $C = 0.001$) |
+| $\|\mathbf{w}\|_2^2$ | L2 norm of the weight vector, penalizing large coefficients to reduce overfitting |
+
+**Classification Rule:** An observation is classified as extreme if $P(y = 1 \mid \mathbf{x}) \geq \tau$, where $\tau = 0.5$ is the default decision threshold.
+
+
 ### 4.1 Model Configuration
 
 |Parameter|Value|Rationale|
@@ -295,10 +324,9 @@ The regularization parameter _C_ was selected by training models across C = {0.0
 
 **C = 0.001** was selected as it achieved the highest validation F1 and PR-AUC, while converging 15x faster than C = 1.0.
 
-!["figure number 5"](/pictures/predict-rain-hour/lr_learning_curve.png)
+!["figure number 4"](/pictures/predict-rain-hour/lr_learning_curve.png)
 
 
-!["figure number 6"](/pictures/predict-rain-hour/lr_regularization_curve.png)
 
 
 ### 4.3 Validation Set Performance
@@ -320,7 +348,7 @@ The regularization parameter _C_ was selected by training models across C = {0.0
 
 **Interpretation:** The model correctly identified **453 out of 536** extreme events (84.5% recall), at the cost of **9,691 false alarms**. The PR-AUC of 0.1047 represents a **25.5x improvement** over a random baseline (0.0041).
 
-!["figure number 7"](/pictures/predict-rain-hour/logistic_regression_evaluation.png)
+!["figure number 5"](/pictures/predict-rain-hour/logistic_regression_evaluation.png)
 
 
 ### 4.4 Test Set Performance
@@ -333,7 +361,7 @@ The regularization parameter _C_ was selected by training models across C = {0.0
 |**ROC-AUC**|0.9216|
 |**PR-AUC**|0.0949 (baseline = 0.0042)|
 
-!["figure number 8"](/pictures/predict-rain-hour/lr_test_final_evaluation.png)
+!["figure number 6"](/pictures/predict-rain-hour/lr_test_final_evaluation.png)
 
 
 **Confusion Matrix (Test Set):**
@@ -387,7 +415,7 @@ The default classification threshold of 0.5 was analyzed against alternative thr
 
 The analysis reveals that lowering the threshold substantially increases recall at the cost of more false alarms, while precision remains low at all thresholds. The default threshold of 0.5 was retained for this baseline model; optimal threshold selection is deferred to the final deployed model.
 
-!["figure number 9"](/pictures/predict-rain-hour/lr_threshold_tuning.png)
+!["figure number 7"](/pictures/predict-rain-hour/lr_threshold_tuning.png)
 
 ### 4.7 Feature Coefficients -- What the Model Learned
 
@@ -418,7 +446,7 @@ The top 20 features by absolute coefficient magnitude reveal the atmospheric sig
 
 **Model intercept (bias):** -2.0022 (the model starts with a strong prior toward "no extreme event", consistent with the 0.33% base rate).
 
-!["figure number 10"](/pictures/predict-rain-hour/lr_coefficients.png)
+!["figure number 8"](/pictures/predict-rain-hour/lr_coefficients.png)
 
 **Physical interpretation:** The model has learned a coherent meteorological story:
 

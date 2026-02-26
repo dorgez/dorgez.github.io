@@ -44,7 +44,7 @@ On November 14, 2025, Ashkelon Port experienced a rainfall event that overwhelme
 | **120 min** | **64.4** | 19.0 | 26.5 | 32.5  | 39.0  | 41.0  | 47.3  | 54.5   | 62.5   | 74.0   | **~150 years**     |
 
 ![Figure 1: IDF curves comparison](/pictures/ashkelon_pics/Pasted%20image%2020251116141726.png) 
-**Figure 1: IDF curves comparison*
+*Figure 1: IDF curves comparison*
 ![Figure 2: Rainfall Hyetograph and intensity](/pictures/ashkelon_pics/Pasted%20image%2020251116150705.png) 
 *Figure 2: Rainfall Hyetograph and intensity*
 
