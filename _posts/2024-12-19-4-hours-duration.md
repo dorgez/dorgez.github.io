@@ -2,8 +2,8 @@
 layout: post
 title: "When Statistics Tell Different Stories: The Remarkable Rain Event in Northern Israel"
 date: 2024-12-19 00:00:00 +0800
-categories: [Hydrology, Climate change, Python]
-tags: [hydrology,python,code,climate]
+categories: [Hydrology]
+tags: [hydrology, python, code, climate]
 image: /pictures/4-hours-duration/Copy of Copy of Hydrology.png
 math: true
 

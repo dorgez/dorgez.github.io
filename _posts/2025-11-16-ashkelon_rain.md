@@ -2,8 +2,8 @@
 layout: post
 title: "Case Study: Rain Event Analysis- Ashkelon Flooding"
 date: 2025-11-16 00:00:00 +0800
-categories: [Code, python, Hydrology]
-tags: [code, hydrology]
+categories: [Hydrology]
+tags: [hydrology, python, code]
 image: /pictures/ashkelon_pics/ashkelon_banner.jpg
 
 

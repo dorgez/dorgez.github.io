@@ -2,8 +2,8 @@
 layout: post
 title: "Exploring the Mysteries of Barracuda Lake: A Diver's Paradise in Coron, Philippines"
 date: 2024-02-17 00:00:00 +0800
-categories: [Diving,Tech, Review]
-tags: [diving,tech,review]
+categories: [Diving]
+tags: [diving, travel]
 image: /pictures/barracudalake/click_bait_baracuda_lake.png
 
 

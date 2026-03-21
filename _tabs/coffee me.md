@@ -1,7 +1,7 @@
 ---
-layou: page
+layout: page
 icon: fa-solid fa-mug-hot
-order: 4
+order: 5
 ---
 
 <div class="coffee-container">

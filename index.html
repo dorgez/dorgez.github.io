@@ -1,4 +1,198 @@
 ---
-layout: home
-# Index page
+layout: default
 ---
+<style>
+  .portfolio-hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .portfolio-avatar {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0077b6;
+    box-shadow: 0 4px 20px rgba(0, 119, 182, 0.3);
+    margin-bottom: 1.5rem;
+  }
+
+  .portfolio-greeting {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    margin-bottom: 0.3rem;
+  }
+
+  .portfolio-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+    opacity: 0.8;
+  }
+
+  .typewriter-line {
+    font-size: 2.4rem;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .typewriter-prefix {
+    opacity: 0.6;
+  }
+
+  .typewriter-text {
+    color: #0077b6;
+    font-weight: 600;
+  }
+
+  .typewriter-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.2em;
+    background: #0077b6;
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    animation: blink 0.8s infinite;
+  }
+
+  .portfolio-bio {
+    max-width: 520px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+  }
+
+  .portfolio-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .portfolio-btn {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .portfolio-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .portfolio-btn-primary {
+    background: #2d333b;
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .portfolio-btn-primary:hover {
+    background: #3d444d;
+    box-shadow: 0 0 0 3px #fff, 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .portfolio-btn-secondary {
+    background: #2d333b;
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .portfolio-btn-secondary:hover {
+    background: #3d444d;
+    box-shadow: 0 0 0 3px #fff, 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .portfolio-name {
+      font-size: 2rem;
+    }
+    .typewriter-line {
+      font-size: 1.1rem;
+    }
+    .portfolio-avatar {
+      width: 150px;
+      height: 150px;
+    }
+  }
+</style>
+
+<div class="portfolio-hero">
+  <img
+    src="/pictures/profile2.png"
+    alt="Dor G"
+    class="portfolio-avatar"
+    onerror="this.style.display='none'"
+  >
+
+  <p class="portfolio-greeting">Hello, I'm</p>
+  <h1 class="portfolio-name">Dor G</h1>
+
+  <div class="typewriter-line">
+    <span class="typewriter-prefix">I'm a </span>
+    <span class="typewriter-text" id="typewriter"></span>
+    <span class="typewriter-cursor"></span>
+  </div>
+
+  <div class="portfolio-buttons">
+    <a href="/posts/" class="portfolio-btn portfolio-btn-primary">Explore My Posts</a>
+    <a href="/about-me/" class="portfolio-btn portfolio-btn-secondary">About Me</a>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var phrases = ['Water Engineer', 'Hydrologist', 'Data Scientist', 'Master Diver'];
+    var el = document.getElementById('typewriter');
+    var phraseIndex = 0;
+    var charIndex = 0;
+    var isDeleting = false;
+    var typeSpeed = 100;
+
+    function type() {
+      var current = phrases[phraseIndex];
+
+      if (isDeleting) {
+        el.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 50;
+      } else {
+        el.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 100;
+      }
+
+      if (!isDeleting && charIndex === current.length) {
+        typeSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typeSpeed = 400;
+      }
+
+      setTimeout(type, typeSpeed);
+    }
+
+    type();
+  })();
+</script>

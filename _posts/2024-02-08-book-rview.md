@@ -2,8 +2,8 @@
 layout: post
 title: "Honest Review About 'Atomic Habits' and 'UnF*ck Yourself'"
 date: 2024-02-08 00:00:00 +0800
-categories: [Review]
-tags: [books,review]
+categories: [Books]
+tags: [books, reviews]
 image: /pictures/book-rview/Review_for_atomic_habits_and_unfkusrlf.png
 
 

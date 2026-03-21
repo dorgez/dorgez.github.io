@@ -2,8 +2,8 @@
 layout: post
 title: "Mastering AutoHotkey (AHK): A Beginner's Guide to Automation With a Video"
 date: 2025-01-25 00:00:00 +0800
-categories: [Code, Tech, Productivity]
-tags: [code, productivity]
+categories: [Tech]
+tags: [tech, productivity, code]
 image: /pictures/AHK-productivity/AHK_banner_for_website.png
 
 

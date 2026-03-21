@@ -2,8 +2,8 @@
 layout: post
 title: "Can a machine learning model predict whether an extreme rainfall event will occur within the next hour?"
 date: 2026-02-26 00:00:00 +0800
-categories: [Code, python, Hydrology]
-tags: [code, hydrology]
+categories: [Machine Learning]
+tags: [hydrology, python, code, machine learning]
 image: /pictures/predict-rain-hour/post_picture.png
 math: true
 mermaid: true
