@@ -12,35 +12,15 @@ h1, h2, h3, p, .feature-text {
   font-family: 'Space Mono', monospace;
 }
 
-/* Typewriter effect styling */
-.typewriter-text {
-  overflow: hidden;
-  border-right: 0.08em solid #0077b6; /* The cursor */
-  white-space: nowrap;
-  margin: 0;
-  display: inline-block;
-  color: #0077b6;
-  animation:
-    typing 2.55s steps(40, end),
-    blink-caret 0.75s step-end infinite;
+/* Typewriter cursor */
+.typewriter-cursor {
+  border-right: 0.08em solid #0077b6;
+  animation: blink-caret 0.75s step-end infinite;
 }
 
-/* The typing animation */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor animation */
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: #0077b6; }
-}
-
-/* Wrapper to contain the animated heading properly */
-.typewriter-wrapper {
-  display: inline-block;
-  margin-bottom: 10px;
 }
 
 section {
@@ -144,50 +124,47 @@ section {
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Select all headings to animate
-    const headings = document.querySelectorAll('.content h2');
+    var headings = document.querySelectorAll('.content h2');
 
-    // Set up Intersection Observer for scroll-based animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        // If the heading is now visible
+    function typeText(element, text, callback) {
+      var i = 0;
+      element.style.color = '#0077b6';
+      element.classList.add('typewriter-cursor');
+      function type() {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, 266);
+        } else {
+          element.classList.remove('typewriter-cursor');
+          if (callback) callback();
+        }
+      }
+      type();
+    }
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-          // Get the heading element
-          const heading = entry.target;
-
-          // Only animate if it hasn't been animated yet
+          var heading = entry.target;
           if (!heading.classList.contains('animated')) {
-            // Mark as animated
             heading.classList.add('animated');
-
-            // Store original text
-            const originalText = heading.textContent;
-            heading.textContent = '';
-
-            // Create animated elements
-            const wrapper = document.createElement('div');
-            wrapper.className = 'typewriter-wrapper';
-
-            const typewriterSpan = document.createElement('span');
-            typewriterSpan.className = 'typewriter-text';
-            typewriterSpan.textContent = originalText;
-
-            // Replace heading content with animated structure
-            wrapper.appendChild(typewriterSpan);
-            heading.appendChild(wrapper);
-
-            // Stop observing this heading
+            // Extract text from first span to avoid grabbing anchor icon text
+            var span = heading.querySelector('span');
+            var originalText = span ? span.textContent.trim() : heading.textContent.trim();
+            // Clear heading content
+            heading.innerHTML = '';
+            // Create a span for the typed text
+            var typedSpan = document.createElement('span');
+            heading.appendChild(typedSpan);
+            typeText(typedSpan, originalText);
             observer.unobserve(heading);
           }
         }
       });
-    }, {
-      // Start animation when heading is 20% visible
-      threshold: 0.2
-    });
+    }, { threshold: 0.2 });
 
-    // Start observing each heading
-    headings.forEach(heading => {
+    headings.forEach(function(heading) {
       observer.observe(heading);
     });
   });
