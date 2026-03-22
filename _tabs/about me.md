@@ -12,15 +12,20 @@ h1, h2, h3, p, .feature-text {
   font-family: 'Space Mono', monospace;
 }
 
-/* Typewriter cursor */
+/* Typewriter cursor - same as portfolio */
 .typewriter-cursor {
-  border-right: 0.08em solid #0077b6;
-  animation: blink-caret 0.75s step-end infinite;
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background: #0077b6;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 0.8s infinite;
 }
 
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #0077b6; }
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 section {
@@ -85,7 +90,7 @@ section {
   }
 </style>
 
-## Who I Am
+<h2><span id="heading-1" style="color: #0077b6; font-weight: 600;"></span><span class="typewriter-cursor" id="cursor-1"></span></h2>
 
 <div style="display: flex; align-items: center; margin-bottom: 20px;" class="flex-container">
   <div style="flex: 1.3; margin-right: 20px; display: flex; align-items: center; height: 100%;" class="flex-text">
@@ -98,7 +103,7 @@ section {
 
 <div class="section-divider"></div>
 
-<h2>What I Do</h2>
+<h2><span id="heading-2" style="color: #0077b6; font-weight: 600;"></span><span class="typewriter-cursor" id="cursor-2"></span></h2>
 
 <div style="display: flex; align-items: center; margin-bottom: 20px;" class="flex-container">
   <div style="flex: 0.7; margin-right: 20px;" class="flex-image">
@@ -111,7 +116,7 @@ section {
 
 <div class="section-divider"></div>
 
-<h2>Today</h2>
+<h2><span id="heading-3" style="color: #0077b6; font-weight: 600;"></span><span class="typewriter-cursor" id="cursor-3"></span></h2>
 
 <div style="display: flex; align-items: center; margin-bottom: 20px;" class="flex-container">
   <div style="flex: 1.3; margin-right: 20px; display: flex; align-items: center; height: 100%;" class="flex-text">
@@ -123,49 +128,50 @@ section {
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var headings = document.querySelectorAll('.content h2');
+  (function () {
+    var headings = [
+      { id: 'heading-1', cursor: 'cursor-1', text: 'Who I Am' },
+      { id: 'heading-2', cursor: 'cursor-2', text: 'What I Do' },
+      { id: 'heading-3', cursor: 'cursor-3', text: 'Today' }
+    ];
 
-    function typeText(element, text, callback) {
+    function typeText(el, cursorEl, text) {
       var i = 0;
-      element.style.color = '#0077b6';
-      element.classList.add('typewriter-cursor');
       function type() {
         if (i < text.length) {
-          element.textContent += text.charAt(i);
+          el.textContent += text.charAt(i);
           i++;
           setTimeout(type, 266);
         } else {
-          element.classList.remove('typewriter-cursor');
-          if (callback) callback();
+          cursorEl.style.display = 'none';
         }
       }
       type();
     }
 
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var heading = entry.target;
-          if (!heading.classList.contains('animated')) {
-            heading.classList.add('animated');
-            // Extract text from first span to avoid grabbing anchor icon text
-            var span = heading.querySelector('span');
-            var originalText = span ? span.textContent.trim() : heading.textContent.trim();
-            // Clear heading content
-            heading.innerHTML = '';
-            // Create a span for the typed text
-            var typedSpan = document.createElement('span');
-            heading.appendChild(typedSpan);
-            typeText(typedSpan, originalText);
-            observer.unobserve(heading);
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+          entry.target.dataset.animated = 'true';
+          var config = headings.find(function (h) {
+            return document.getElementById(h.id) === entry.target.querySelector('#' + h.id) ||
+                   entry.target.contains(document.getElementById(h.id));
+          });
+          if (config) {
+            var el = document.getElementById(config.id);
+            var cursorEl = document.getElementById(config.cursor);
+            typeText(el, cursorEl, config.text);
           }
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.2 });
 
-    headings.forEach(function(heading) {
-      observer.observe(heading);
+    headings.forEach(function (h) {
+      var el = document.getElementById(h.id);
+      if (el && el.closest('h2')) {
+        observer.observe(el.closest('h2'));
+      }
     });
-  });
+  })();
 </script>
