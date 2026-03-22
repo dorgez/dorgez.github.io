@@ -17,7 +17,7 @@ h1, h2, h3, p, .feature-text {
   display: inline-block;
   width: 2px;
   height: 1.2em;
-  background: #0077b6;
+  background: #4385BE;
   margin-left: 2px;
   vertical-align: text-bottom;
   animation: blink 0.8s infinite;
@@ -52,7 +52,7 @@ section {
   }
   img {
   transition: transform 0.3s ease;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 10px rgba(16,15,15,0.1);
   }
 
   img:hover {
@@ -65,7 +65,7 @@ section {
   p { font-size: 1.125rem; }
   .feature-text { font-size: 1.35rem; }
   .section-divider {
-    border-top: 1px solid #292929;
+    border-top: 1px solid #282726;
     margin: 2rem 0;
   }
 
@@ -90,7 +90,7 @@ section {
   }
 </style>
 
-<h2><span id="heading-1" style="color: #0077b6; font-weight: 600;"></span><span class="typewriter-cursor" id="cursor-1"></span></h2>
+<h2><span id="heading-1" style="color: #4385BE; font-weight: 600;"></span><span class="typewriter-cursor" id="cursor-1"></span></h2>
 
 <div style="display: flex; align-items: center; margin-bottom: 20px;" class="flex-container">
   <div style="flex: 1.3; margin-right: 20px; display: flex; align-items: center; height: 100%;" class="flex-text">
@@ -103,7 +103,7 @@ section {
 
 <div class="section-divider"></div>
 
-<h2><span id="heading-2" style="color: #0077b6; font-weight: 600;"></span><span class="typewriter-cursor" id="cursor-2"></span></h2>
+<h2><span id="heading-2" style="color: #4385BE; font-weight: 600;"></span><span class="typewriter-cursor" id="cursor-2"></span></h2>
 
 <div style="display: flex; align-items: center; margin-bottom: 20px;" class="flex-container">
   <div style="flex: 0.7; margin-right: 20px;" class="flex-image">
@@ -116,7 +116,7 @@ section {
 
 <div class="section-divider"></div>
 
-<h2><span id="heading-3" style="color: #0077b6; font-weight: 600;"></span><span class="typewriter-cursor" id="cursor-3"></span></h2>
+<h2><span id="heading-3" style="color: #4385BE; font-weight: 600;"></span><span class="typewriter-cursor" id="cursor-3"></span></h2>
 
 <div style="display: flex; align-items: center; margin-bottom: 20px;" class="flex-container">
   <div style="flex: 1.3; margin-right: 20px; display: flex; align-items: center; height: 100%;" class="flex-text">

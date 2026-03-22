@@ -4,7 +4,8 @@
       "Bash(bundle info:*)",
       "Bash(head -20 X:OneDrivedorgez.github.io/_posts/*.md)",
       "Bash(grep -r \"gtag\\\\|analytics\\\\|GA4\\\\|G-\" X:OneDrivedorgez.github.io --include=*.md --include=*.yml --include=*.html --include=*.rb)",
-      "WebFetch(domain:www.mitchellsparrow.com)"
+      "WebFetch(domain:www.mitchellsparrow.com)",
+      "Bash(find /x/OneDrive/dorgez.github.io/_sass -type f \\\\\\(-name *.scss -o -name *.sass \\\\\\))"
     ]
   }
 }
