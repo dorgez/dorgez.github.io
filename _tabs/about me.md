@@ -5,14 +5,22 @@ order: 2
 ---
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* Mono font for this page */
+h1, h2, h3, p, .feature-text {
+  font-family: 'Space Mono', monospace;
+}
+
 /* Typewriter effect styling */
 .typewriter-text {
   overflow: hidden;
-  border-right: 0.08em solid #3498db; /* The cursor */
+  border-right: 0.08em solid #0077b6; /* The cursor */
   white-space: nowrap;
   margin: 0;
   display: inline-block;
-  animation: 
+  color: #0077b6;
+  animation:
     typing 2.55s steps(40, end),
     blink-caret 0.75s step-end infinite;
 }
@@ -26,7 +34,7 @@ order: 2
 /* The typewriter cursor animation */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color:rgb(247, 247, 247); }
+  50% { border-color: #0077b6; }
 }
 
 /* Wrapper to contain the animated heading properly */
@@ -47,7 +55,7 @@ section {
 }
 
   h1, h2, h3 {
-  font-family: 'Montserrat', 'Raleway', sans-serif;
+  font-family: 'Space Mono', monospace;
   font-weight: 600;
   }
 
@@ -82,14 +90,6 @@ section {
   margin-right: auto;
   }
 
-  .final-section {
-    background-color: #292929;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
   /* Ensuring responsive design works */
   @media (max-width: 768px) {
     .flex-container {
@@ -131,15 +131,22 @@ section {
 
 <div class="section-divider"></div>
 
-<div class="final-section">
-  <h2>Today</h2>
+<h2>Today</h2>
 
-  <p>Always exploring, always learning. Feel free to reach out if you want to collaborate or just talk water, code, or diving.</p>
+<div style="display: flex; align-items: center; margin-bottom: 20px;" class="flex-container">
+  <div style="flex: 1.3; margin-right: 20px; display: flex; align-items: center; height: 100%;" class="flex-text">
+    <p class="feature-text">Always exploring, always learning. Feel free to reach out if you want to collaborate or just talk water, code, or diving.</p>
+  </div>
+  <div style="flex: 0.7;" class="flex-image">
+    <img src="../pictures/favicon_io/android-chrome-512x512.png" alt="Dor G" style="max-width: 100%; height: auto; border-radius: 50%;">
+  </div>
+</div>
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Select all headings to animate
-    const headings = document.querySelectorAll('h2');
-    
+    const headings = document.querySelectorAll('.content h2');
+
     // Set up Intersection Observer for scroll-based animation
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -147,28 +154,28 @@ section {
         if (entry.isIntersecting) {
           // Get the heading element
           const heading = entry.target;
-          
+
           // Only animate if it hasn't been animated yet
           if (!heading.classList.contains('animated')) {
             // Mark as animated
             heading.classList.add('animated');
-            
+
             // Store original text
             const originalText = heading.textContent;
             heading.textContent = '';
-            
+
             // Create animated elements
             const wrapper = document.createElement('div');
             wrapper.className = 'typewriter-wrapper';
-            
+
             const typewriterSpan = document.createElement('span');
             typewriterSpan.className = 'typewriter-text';
             typewriterSpan.textContent = originalText;
-            
+
             // Replace heading content with animated structure
             wrapper.appendChild(typewriterSpan);
             heading.appendChild(wrapper);
-            
+
             // Stop observing this heading
             observer.unobserve(heading);
           }
@@ -178,12 +185,10 @@ section {
       // Start animation when heading is 20% visible
       threshold: 0.2
     });
-    
+
     // Start observing each heading
     headings.forEach(heading => {
       observer.observe(heading);
     });
   });
 </script>
-
-</div>
