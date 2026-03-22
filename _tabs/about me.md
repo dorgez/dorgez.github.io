@@ -5,11 +5,16 @@ order: 2
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@font-face {
+  font-family: 'Commit Mono';
+  src: url('/assets/fonts/CommitMono VariableFont.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+}
 
 /* Mono font for this page */
 h1, h2, h3, p, .feature-text {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Commit Mono', monospace;
 }
 
 /* Typewriter cursor - same as portfolio */
@@ -40,7 +45,7 @@ section {
 }
 
   h1, h2, h3 {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Commit Mono', monospace;
   font-weight: 600;
   }
 
