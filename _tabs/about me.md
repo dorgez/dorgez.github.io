@@ -50,12 +50,13 @@ section {
     line-height: 1.6;
     margin: 0;
   }
-  img {
+  .content img {
   transition: transform 0.3s ease;
   box-shadow: 0 3px 10px rgba(16,15,15,0.1);
+  border: 2px solid #4385BE;
   }
 
-  img:hover {
+  .content img:hover {
     transform: scale(1.10);
   }
 
@@ -107,7 +108,7 @@ section {
 
 <div style="display: flex; align-items: center; margin-bottom: 20px;" class="flex-container">
   <div style="flex: 0.7; margin-right: 20px;" class="flex-image">
-    <img src="../pictures/aboutme/13228018933 (1).png" alt="At work" style="max-width: 100%; height: auto; border-radius: 8px;">
+    <img src="../pictures/aboutme/13228018933 (1).png" alt="At work" style="max-width: 100%; height: auto; border-radius: 50%;">
   </div>
   <div style="flex: 1.3;" class="flex-text">
     <p class="feature-text">I work as a hydrology consultant specializing in urban runoff management. On the side, I write Python, dive into data science, and share what I learn here.</p>

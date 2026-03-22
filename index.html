@@ -112,6 +112,26 @@ layout: default
     box-shadow: 0 0 0 3px #FFFCF0, 0 4px 12px rgba(16, 15, 15, 0.3);
   }
 
+  /* Light mode: different hover outline color */
+  @media (prefers-color-scheme: light) {
+    html:not([data-mode]) .portfolio-btn-primary:hover,
+    html[data-mode='light'] .portfolio-btn-primary:hover {
+      box-shadow: 0 0 0 3px #4385BE, 0 4px 12px rgba(16, 15, 15, 0.3);
+    }
+    html:not([data-mode]) .portfolio-btn-secondary:hover,
+    html[data-mode='light'] .portfolio-btn-secondary:hover {
+      box-shadow: 0 0 0 3px #4385BE, 0 4px 12px rgba(16, 15, 15, 0.3);
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    html[data-mode='light'] .portfolio-btn-primary:hover {
+      box-shadow: 0 0 0 3px #4385BE, 0 4px 12px rgba(16, 15, 15, 0.3);
+    }
+    html[data-mode='light'] .portfolio-btn-secondary:hover {
+      box-shadow: 0 0 0 3px #4385BE, 0 4px 12px rgba(16, 15, 15, 0.3);
+    }
+  }
+
   @keyframes blink {
     0%,
     100% {
