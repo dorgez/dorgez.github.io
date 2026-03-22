@@ -503,3 +503,16 @@
     .highlight .gr { color: #F2F0E5; }
   }
 }
+
+/* ===== Commit Mono for sidebar tagline ===== */
+@font-face {
+  font-family: 'Commit Mono';
+  src: url('/assets/fonts/CommitMono VariableFont.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+}
+
+.site-subtitle,
+.site-title {
+  font-family: 'Commit Mono', monospace !important;
+}
