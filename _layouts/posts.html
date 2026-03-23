@@ -9,6 +9,14 @@ layout: default
 
 {% assign posts = all_pinned | concat: all_normal %}
 
+<!-- Merriweather font for posts listing -->
+<style>
+  #post-list .card-title,
+  #post-list .card-text {
+    font-family: 'Merriweather', serif !important;
+  }
+</style>
+
 <div id="post-list" class="flex-grow-1 px-xl-1">
   {% for post in posts %}
     <article class="card-wrapper card">
@@ -79,6 +87,12 @@ layout: default
                     {% endfor %}
                   </span>
                 {% endif %}
+
+                <!-- read time -->
+                {% assign words = post.content | number_of_words %}
+                {% assign mins = words | divided_by: 200 | at_least: 1 %}
+                <i class="far fa-clock fa-fw me-1"></i>
+                <span>{{ mins }} min</span>
               </div>
 
               {% if post.pin %}

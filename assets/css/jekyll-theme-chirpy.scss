@@ -513,6 +513,11 @@
 }
 
 .site-subtitle,
-.site-title {
+.site-title,
+#sidebar .nav-link,
+#breadcrumb,
+#breadcrumb a,
+.post-tag,
+#tags .tag {
   font-family: 'Commit Mono', monospace !important;
 }
