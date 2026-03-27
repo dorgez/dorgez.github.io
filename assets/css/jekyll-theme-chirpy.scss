@@ -536,3 +536,8 @@
 @media (max-width: 576px) {
   .photo-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== Strikethrough style for retired/replaced items ===== */
+del {
+  color: var(--text-muted-color);
+}
