@@ -521,3 +521,18 @@
 #tags .tag {
   font-family: 'Commit Mono', monospace !important;
 }
+
+/* ===== Photo grid for side-by-side images ===== */
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+.photo-grid img {
+  width: 100%;
+  border-radius: 6px;
+}
+@media (max-width: 576px) {
+  .photo-grid { grid-template-columns: 1fr; }
+}
