@@ -1,0 +1,38 @@
+# Dive Sites Data
+# Add new dive sites by copying the template at the bottom and filling in the fields.
+# Required fields: name, lat, lng, date
+# Optional fields: everything else
+
+sites:
+  - name: "Barracuda Lake"
+    location: "Coron, Palawan, Philippines"
+    country: "Philippines"
+    lat: 11.9928
+    lng: 120.2020
+    date: "2024-02-17"
+    max_depth_m: 30
+    water_temp_c: 28
+    visibility_m: 15
+    type: "lake"
+    rating: 5
+    description: "Thermocline lake with saltwater below 14m. Temperature jumps from 28C to nearly 40C."
+    blog_post: "/posts/barracuda-lake/"
+    image: "/pictures/barracudalake/click_bait_baracuda_lake.png"
+
+  # ──────────────────────────────────────────────
+  # TEMPLATE - copy the block below to add a site:
+  # ──────────────────────────────────────────────
+  # - name: ""
+  #   location: ""
+  #   country: ""
+  #   lat: 0.0
+  #   lng: 0.0
+  #   date: "YYYY-MM-DD"
+  #   max_depth_m: 0
+  #   water_temp_c: 0
+  #   visibility_m: 0
+  #   type: ""        # reef | wreck | cave | lake | cenote | wall | drift | shore | muck
+  #   rating: 0       # 1-5
+  #   description: ""
+  #   blog_post: ""   # e.g. "/posts/my-dive/"
+  #   image: ""       # e.g. "/pictures/my-dive/photo.jpg"

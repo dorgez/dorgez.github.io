@@ -518,8 +518,15 @@
 #breadcrumb,
 #breadcrumb a,
 .post-tag,
-#tags .tag {
+#tags .tag,
+.dynamic-title,
+#topbar-title {
   font-family: 'Commit Mono', monospace !important;
+}
+
+.dynamic-title,
+#topbar-title {
+  text-transform: uppercase;
 }
 
 /* ===== Photo grid for side-by-side images ===== */
