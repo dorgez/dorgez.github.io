@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-  /* Read dive sites data from JSON in the page */
-  var dataEl = document.getElementById('dive-sites-data');
-  if (!dataEl) return;
-  var diveSites;
-  try { diveSites = JSON.parse(dataEl.textContent); } catch (e) { return; }
-  if (!diveSites || !diveSites.length) return;
+  /* diveSites is set by dive-sites-data.js (loaded before this script) */
+  if (typeof diveSites === 'undefined' || !diveSites || !diveSites.length) return;
 
   /* Color map for dive types */
   var typeColors = {

@@ -2,7 +2,6 @@
 layout: page
 icon: fa-solid fa-earth-asia
 order: 5
-leaflet: true
 ---
 
 <style>
@@ -432,8 +431,3 @@ leaflet: true
 <div class="map-wrap">
   <div id="dive-map"></div>
 </div>
-
-<!-- ── Data from YAML (as JSON, read by diving-map.js) ── -->
-<script type="application/json" id="dive-sites-data">
-[{% for ds in site.data.dive_sites.sites %}{"name":{{ ds.name | jsonify }},"location":{{ ds.location | default: "" | jsonify }},"country":{{ ds.country | default: "" | jsonify }},"lat":{{ ds.lat }},"lng":{{ ds.lng }},"date":{{ ds.date | jsonify }},"maxDepth":{{ ds.max_depth_m | default: 0 }},"waterTemp":{{ ds.water_temp_c | default: 0 }},"visibility":{{ ds.visibility_m | default: 0 }},"type":{{ ds.type | default: "reef" | jsonify }},"rating":{{ ds.rating | default: 0 }},"description":{{ ds.description | default: "" | jsonify }},"blogPost":{{ ds.blog_post | default: "" | jsonify }},"image":{{ ds.image | default: "" | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
-</script>
