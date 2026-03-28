@@ -19,6 +19,20 @@ sites:
     blog_post: "/posts/barracuda-lake/"
     image: "/pictures/barracudalake/click_bait_baracuda_lake.png"
 
+  - name: "2nd"
+    location: "Eilat"
+    country: "eilat"
+    lat: 29.50309907796566
+    lng: 34.951987069479124
+    date: "2024-07-17"
+    max_depth_m: 30
+    water_temp_c: 28
+    visibility_m: 15
+    type: "lake"
+    rating: 3
+    description: "Thermocline lake with saltwater below 14m. Temperature jumps from 28C to nearly 40C."
+    blog_post: "/posts/barracuda-lake/"
+    image: "/pictures/barracudalake/click_bait_baracuda_lake.png"
   # ──────────────────────────────────────────────
   # TEMPLATE - copy the block below to add a site:
   # ──────────────────────────────────────────────
