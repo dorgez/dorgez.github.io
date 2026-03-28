@@ -22,17 +22,17 @@ sites:
   # ──────────────────────────────────────────────
   # TEMPLATE - copy the block below to add a site:
   # ──────────────────────────────────────────────
-  # - name: ""
-  #   location: ""
-  #   country: ""
-  #   lat: 0.0
-  #   lng: 0.0
-  #   date: "YYYY-MM-DD"
-  #   max_depth_m: 0
-  #   water_temp_c: 0
-  #   visibility_m: 0
-  #   type: ""        # reef | wreck | cave | lake | cenote | wall | drift | shore | muck
-  #   rating: 0       # 1-5
-  #   description: ""
-  #   blog_post: ""   # e.g. "/posts/my-dive/"
-  #   image: ""       # e.g. "/pictures/my-dive/photo.jpg"
+  # - name: ""              # REQUIRED
+  #   lat: 0.0              # REQUIRED
+  #   lng: 0.0              # REQUIRED
+  #   date: "YYYY-MM-DD"    # REQUIRED
+  #   location: ""          # optional - e.g. "Coron, Palawan, Philippines"
+  #   country: ""           # optional - used for stats counter
+  #   max_depth_m: 0        # optional
+  #   water_temp_c: 0       # optional
+  #   visibility_m: 0       # optional
+  #   type: ""              # optional - reef | wreck | cave | lake | cenote | wall | drift | shore | muck
+  #   rating: 0             # optional - 1-5 stars
+  #   description: ""       # optional
+  #   blog_post: ""         # optional - e.g. "/posts/my-dive/"
+  #   image: ""             # optional - e.g. "/pictures/my-dive/photo.jpg"
