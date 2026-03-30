@@ -8,11 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
     wreck:  '#DA702C',
     cave:   '#8B7EC8',
     lake:   '#4385BE',
-    cenote: '#24837B',
     wall:   '#D0A215',
     drift:  '#879A39',
     shore:  '#CE5D97',
-    muck:   '#6F6E69'
+    night:  '#6F6E69'
   };
 
   /* Dark/Light mode detection */
@@ -67,9 +66,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var color = typeColors[type] || '#4385BE';
     return L.divIcon({
       className: '',
-      iconSize: [32, 32],
-      iconAnchor: [16, 16],
-      popupAnchor: [0, -18],
+      iconSize: [20, 20],
+      iconAnchor: [10, 10],
+      popupAnchor: [0, -12],
       html: '<div class="dive-marker marker-drop" style="background:' + color + ';"><i class="fa-solid fa-location-dot"></i></div>'
     });
   }

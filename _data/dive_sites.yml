@@ -18,21 +18,22 @@ sites:
     description: "Thermocline lake with saltwater below 14m. Temperature jumps from 28C to nearly 40C."
     blog_post: "/posts/barracuda-lake/"
     image: "/pictures/barracudalake/click_bait_baracuda_lake.png"
-
-  - name: "2nd"
+ 
+  - name: "Yatush Wreck"
     location: "Eilat"
     country: "eilat"
-    lat: 29.50309907796566
-    lng: 34.951987069479124
+    lat: 29.512045518176645
+    lng: 34.92694238700502
     date: "2024-07-17"
-    max_depth_m: 30
-    water_temp_c: 28
-    visibility_m: 15
-    type: "lake"
-    rating: 3
-    description: "Thermocline lake with saltwater below 14m. Temperature jumps from 28C to nearly 40C."
-    blog_post: "/posts/barracuda-lake/"
-    image: "/pictures/barracudalake/click_bait_baracuda_lake.png"
+    max_depth_m: 28
+    water_temp_c: 0
+    visibility_m: 0
+    type: "wreck"
+    rating: 4
+    description: "A nice wreck, prettey small but with plenty of marine life around it, this dive was a part of my navigating course i was taking"
+    blog_post: ""
+    image: ""
+
   # ──────────────────────────────────────────────
   # TEMPLATE - copy the block below to add a site:
   # ──────────────────────────────────────────────
@@ -45,7 +46,7 @@ sites:
   #   max_depth_m: 0        # optional
   #   water_temp_c: 0       # optional
   #   visibility_m: 0       # optional
-  #   type: ""              # optional - reef | wreck | cave | lake | cenote | wall | drift | shore | muck
+  #   type: ""              # optional - reef | wreck | cave | lake | wall | drift | shore | night
   #   rating: 0             # optional - 1-5 stars
   #   description: ""       # optional
   #   blog_post: ""         # optional - e.g. "/posts/my-dive/"

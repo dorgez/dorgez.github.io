@@ -125,11 +125,11 @@ order: 5
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   color: #fff;
-  font-size: 14px;
+  font-size: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   transition: transform 0.2s ease;
   position: relative;
@@ -420,11 +420,10 @@ order: 5
   <button class="filter-btn" data-type="wreck"><span class="dot" style="background:#DA702C;"></span>Wreck</button>
   <button class="filter-btn" data-type="cave"><span class="dot" style="background:#8B7EC8;"></span>Cave</button>
   <button class="filter-btn" data-type="lake"><span class="dot" style="background:#4385BE;"></span>Lake</button>
-  <button class="filter-btn" data-type="cenote"><span class="dot" style="background:#24837B;"></span>Cenote</button>
   <button class="filter-btn" data-type="wall"><span class="dot" style="background:#D0A215;"></span>Wall</button>
   <button class="filter-btn" data-type="drift"><span class="dot" style="background:#879A39;"></span>Drift</button>
   <button class="filter-btn" data-type="shore"><span class="dot" style="background:#CE5D97;"></span>Shore</button>
-  <button class="filter-btn" data-type="muck"><span class="dot" style="background:#6F6E69;"></span>Muck</button>
+  <button class="filter-btn" data-type="night"><span class="dot" style="background:#6F6E69;"></span>Night</button>
 </div>
 
 <!-- ── Map ── -->
