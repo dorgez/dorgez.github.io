@@ -34,6 +34,21 @@ sites:
     blog_post: ""
     image: ""
 
+  - name: "Almog Beach Nature Reserve / Tamar Reef"
+    location: "Eilat"
+    country: "Israel"
+    lat: 29.51054327848571
+    lng: 34.92441011146987
+    date: "2017-07-27"
+    max_depth_m: 9
+    water_temp_c: 0
+    visibility_m: 0
+    type: "night"
+    rating: 4
+    description: " Super cool dive, that i saw there a really weird fish called Largehead hairtail! it was prettey scary fish, he was around 1.2m~ long, and he didn't seems to like us with the flashlights because he was bumping into us, and  instantly disappeared link for the fish https://www.fishbase.se/summary/1288 data "
+    blog_post: ""
+    image: ""
+
   # ──────────────────────────────────────────────
   # TEMPLATE - copy the block below to add a site:
   # ──────────────────────────────────────────────
