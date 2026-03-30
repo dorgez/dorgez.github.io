@@ -18,13 +18,13 @@ sites:
     description: "Thermocline lake with saltwater below 14m. Temperature jumps from 28C to nearly 40C."
     blog_post: "/posts/barracuda-lake/"
     image: "/pictures/barracudalake/click_bait_baracuda_lake.png"
- 
+
   - name: "Yatush Wreck"
     location: "Eilat"
     country: "eilat"
     lat: 29.512045518176645
     lng: 34.92694238700502
-    date: "2024-07-17"
+    date: "2017-07-17"
     max_depth_m: 28
     water_temp_c: 0
     visibility_m: 0
