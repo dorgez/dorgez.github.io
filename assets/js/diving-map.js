@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
       icon: createIcon(ds.type)
     });
 
-    marker.bindPopup(buildPopup(ds), { maxWidth: 300, minWidth: 220 });
+    marker.bindPopup(buildPopup(ds), { maxWidth: 300, minWidth: 220, autoPan: true, autoPanPaddingTopLeft: L.point(10, 120), autoPanPaddingBottomRight: L.point(10, 10) });
     marker.siteData = ds;
 
     marker.on('click', function () {

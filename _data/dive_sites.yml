@@ -32,7 +32,7 @@ sites:
     rating: 4
     description: "A nice wreck, prettey small but with plenty of marine life around it, this dive was a part of my navigating course i was taking"
     blog_post: ""
-    image: "/pictures/diving-map/vlcsnap-2026-03-30-15h38m39s389.webp"
+    image: "/pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp"
 
   - name: "Almog Beach Nature Reserve / Tamar Reef"
     location: "Eilat"
@@ -47,9 +47,8 @@ sites:
     rating: 4
     description: " Super cool dive, that i saw there a really weird fish called Largehead hairtail! it was prettey scary fish, he was around 1.2m~ long, and he didn't seems to like us with the flashlights because he was bumping into us, and  instantly disappeared link for the fish https://www.fishbase.se/summary/1288 data "
     blog_post: ""
-    image: "/pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp"
+    image: "/pictures/diving-map/vlcsnap-2026-03-30-15h38m39s389.webp"
 
-  # ──────────────────────────────────────────────
   # TEMPLATE - copy the block below to add a site:
   # ──────────────────────────────────────────────
   # - name: ""              # REQUIRED
