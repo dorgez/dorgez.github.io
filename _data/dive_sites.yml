@@ -47,7 +47,382 @@ sites:
     rating: 4
     description: " Super cool dive, that i saw there a really weird fish called Largehead hairtail! it was prettey scary fish, he was around 1.2m~ long, and he didn't seems to like us with the flashlights because he was bumping into us, and  instantly disappeared link for the fish https://www.fishbase.se/summary/1288 data "
     blog_post: ""
-    image: "/pictures/diving-map/vlcsnap-2026-03-30-15h38m39s389.webp"
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Almog Beach Nature Reserve / Tamar Reef"
+    location: "Eilat"
+    country: "Israel"
+    lat: 29.51054327848571
+    lng: 34.92441011146987
+    date: "2017-07-27"
+    max_depth_m: 9
+    water_temp_c: 0
+    visibility_m: 0
+    type: "night"
+    rating: 4
+    description: " Super cool dive, that i saw there a really weird fish called Largehead hairtail! it was prettey scary fish, he was around 1.2m~ long, and he didn't seems to like us with the flashlights because he was bumping into us, and  instantly disappeared link for the fish https://www.fishbase.se/summary/1288 data "
+    blog_post: ""
+    image: "/pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp"
+
+  - name: "EAPC Pipeline Open Beach"
+    location: "EAPC Pipeline, Eilat"
+    country: "Israel"
+    lat: 29.52353384
+    lng: 34.93522985
+    date: "2017-07-25"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "shore"
+    rating: 5
+    description: "EAPC pipeline open beach dive"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Shemurat HaHof Hadromi - Ginat Hazav"
+    location: "Shemurat HaHof Hadromi, Eilat"
+    country: "Israel"
+    lat: 29.49656572
+    lng: 34.91091785
+    date: "2017-07-25"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "shore"
+    rating: 5
+    description: "Ginat Hazav dive"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "University Dive Site"
+    location: "University, Eilat"
+    country: "Israel"
+    lat: 29.50087366
+    lng: 34.91659779
+    date: "2017-07-25"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "shore"
+    rating: 5
+    description: "University dive site"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "HaSatil Wreck"
+    location: "HaSatil, Eilat"
+    country: "Israel"
+    lat: 29.51486306
+    lng: 34.92719325
+    date: "2017-07-26"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "wreck"
+    rating: 5
+    description: "HaSatil wreck dive site"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Shmura - Eagle Ray"
+    location: "Shmura, Eilat"
+    country: "Israel"
+    lat: 29.50773348
+    lng: 34.92459909
+    date: "2017-07-28"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "Saw eagle ray!"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Shmura - Sela Moshe"
+    location: "Shmura, Eilat"
+    country: "Israel"
+    lat: 29.50825832
+    lng: 34.92416623
+    date: "2017-07-29"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "Sela Moshe dive at Shmura"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Shmura Deep Dive 34m"
+    location: "Shmura, Eilat"
+    country: "Israel"
+    lat: 29.50742024
+    lng: 34.92384523
+    date: "2017-07-30"
+    max_depth_m: 34
+    water_temp_c: 26
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "Deep dive! 34m at Shmura, 26c under water"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Shmura Deep Dive 40m"
+    location: "Shmura, Eilat"
+    country: "Israel"
+    lat: 29.50742024
+    lng: 34.92384523
+    date: "2017-07-30"
+    max_depth_m: 40
+    water_temp_c: 0
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "2nd deep dive! 40m at Shmura, part of my deep specialty"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Trincomalee"
+    location: "Trincomalee"
+    country: "Sri Lanka"
+    lat: 8.58314
+    lng: 81.24613
+    date: "2017-09-03"
+    max_depth_m: 22
+    water_temp_c: 28
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "Trincomalee dive, 22m deep, water temp 28c"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Navy Island"
+    location: "Navy Island, Trincomalee"
+    country: "Sri Lanka"
+    lat: 8.56558
+    lng: 81.24182
+    date: "2017-09-03"
+    max_depth_m: 12
+    water_temp_c: 0
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "12m deep dive at Navy Island"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Pescador Island"
+    location: "Pescador Island, Moalboal"
+    country: "Philippines"
+    lat: 9.92321
+    lng: 123.34385
+    date: "2017-11-16"
+    max_depth_m: 30
+    water_temp_c: 0
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "Pescador Island, 30m deep"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Talisay Point"
+    location: "Talisay Point"
+    country: "Philippines"
+    lat: 9.94317
+    lng: 123.36756
+    date: "2017-11-16"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 15
+    type: "reef"
+    rating: 5
+    description: "Visibility 15-20m, vertical wall, more stuff in the log book"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Monad Shoal - Thresher Sharks"
+    location: "Monad Shoal, Malapascua"
+    country: "Philippines"
+    lat: 11.30754
+    lng: 124.18757
+    date: "2017-11-24"
+    max_depth_m: 30
+    water_temp_c: 0
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "Thresher shark early morning dive, saw 6x thresher sharks, max depth 30m"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Gato Island"
+    location: "Gato Island, Malapascua"
+    country: "Philippines"
+    lat: 11.44835148
+    lng: 124.0199
+    date: "2017-11-25"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "Saw some nice fish groups and sea horses, and on another dive saw a lot of catfish"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Light House - Night Dive"
+    location: "Light House, Malapascua"
+    country: "Philippines"
+    lat: 11.34258
+    lng: 124.10907
+    date: "2017-11-28"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "night"
+    rating: 5
+    description: "Night dive, wanted to see blue ring octopus, but saw some really nice other stuff"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Apo Island"
+    location: "Apo Island"
+    country: "Philippines"
+    lat: 9.08277
+    lng: 123.27106
+    date: "2017-12-05"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "Wow really nice dive with plenty of marine life, a lot of turtles"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Dive 19"
+    location: "Philippines"
+    country: "Philippines"
+    lat: 9.955532203
+    lng: 125.227612
+    date: "2017-12-09"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "A lot of fish seen, details in the log book"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Napanatau"
+    location: "Napanatau"
+    country: "Philippines"
+    lat: 10.05283757
+    lng: 125.1363829
+    date: "2017-12-10"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "South and north, strong current drift dive, a lot of fish in the log book"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Gunters Wall"
+    location: "Gunters Wall"
+    country: "Philippines"
+    lat: 9.932747946
+    lng: 125.0847774
+    date: "2017-12-12"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "Fish details in the log book"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "San Miguel"
+    location: "San Miguel"
+    country: "Philippines"
+    lat: 12.71308465
+    lng: 123.6089424
+    date: "2017-12-25"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "Some fish in the log book"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Whale Shark Encounter"
+    location: "Donsol"
+    country: "Philippines"
+    lat: 12.65844278
+    lng: 123.7508552
+    date: "2017-12-25"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "This is where I saw the big ass whale shark"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Manta Ray Dive"
+    location: "Donsol"
+    country: "Philippines"
+    lat: 12.66007523
+    lng: 123.7549295
+    date: "2017-12-26"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "reef"
+    rating: 5
+    description: "2nd dive a day later and I saw the manta ray! 3 times"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Olympia Maru Wreck"
+    location: "Coron"
+    country: "Philippines"
+    lat: 11.97073
+    lng: 120.06125
+    date: "2017-01-19"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "wreck"
+    rating: 5
+    description: "Olympia Maru wreck dive in Coron"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
+
+  - name: "Marazah Maru Wreck"
+    location: "Coron"
+    country: "Philippines"
+    lat: 11.98819
+    lng: 120.03735
+    date: "2017-01-19"
+    max_depth_m: 0
+    water_temp_c: 0
+    visibility_m: 0
+    type: "wreck"
+    rating: 5
+    description: "Marazah Maru wreck, the upside down one!"
+    blog_post: ""
+    image: /pictures/diving-map/Gemini_Generated_Image_qbcah0qbcah0qbca.webp
 
   # TEMPLATE - copy the block below to add a site:
   # ──────────────────────────────────────────────

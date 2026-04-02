@@ -127,11 +127,17 @@ document.addEventListener('DOMContentLoaded', function () {
   var clusterGroup = L.markerClusterGroup({
     maxClusterRadius: 50,
     spiderfyOnMaxZoom: true,
-    showCoverageOnHover: false
+    showCoverageOnHover: false,
+    zoomToBoundsOnClick: false
+  });
+
+  clusterGroup.on('clusterclick', function (e) {
+    e.layer.zoomToBounds({ padding: [40, 40], animate: false });
   });
 
   var allMarkers = [];
   var bounds = [];
+  var initialLoadDone = false;
 
   diveSites.forEach(function (ds, i) {
     var marker = L.marker([ds.lat, ds.lng], {
@@ -142,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
     marker.siteData = ds;
 
     marker.on('click', function () {
-      map.flyTo([ds.lat, ds.lng], Math.max(map.getZoom(), 10), { duration: 0.8 });
+      map.flyTo([ds.lat, ds.lng], Math.max(map.getZoom(), 10), { duration: 0.3 });
       var el = this.getElement();
       if (el) {
         var icon = el.querySelector('.dive-marker');
@@ -159,7 +165,11 @@ document.addEventListener('DOMContentLoaded', function () {
       if (el) {
         var icon = el.querySelector('.dive-marker');
         if (icon) {
-          icon.style.animationDelay = (i * 0.1) + 's';
+          if (!initialLoadDone) {
+            icon.style.animationDelay = (i * 0.1) + 's';
+          } else {
+            icon.style.animationDuration = '0s';
+          }
         }
       }
     });
@@ -174,6 +184,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if (bounds.length > 0) {
     map.fitBounds(bounds, { padding: [40, 40], maxZoom: 12 });
   }
+
+  setTimeout(function () { initialLoadDone = true; }, 2000);
 
   /* Filtering */
   var filterBtns = document.querySelectorAll('.filter-btn');
