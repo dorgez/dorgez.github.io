@@ -6,7 +6,10 @@
       "Bash(grep -r \"gtag\\\\|analytics\\\\|GA4\\\\|G-\" X:OneDrivedorgez.github.io --include=*.md --include=*.yml --include=*.html --include=*.rb)",
       "WebFetch(domain:www.mitchellsparrow.com)",
       "Bash(find /x/OneDrive/dorgez.github.io/_sass -type f \\\\\\(-name *.scss -o -name *.sass \\\\\\))",
-      "Bash(bundle exec:*)"
+      "Bash(bundle exec:*)",
+      "PowerShell(gem *)",
+      "PowerShell(git *)",
+      "PowerShell($r=\"C:\\\\Users\\\\Dor\\\\OneDrive\\\\dorgez.github.io\"; Write-Output \"=== tracked? ===\"; git -C $r ls-files --error-unmatch Gemfile.lock; Write-Output \"=== branches ===\"; git -C $r branch -a; Write-Output \"=== behind/ahead ===\"; git -C $r log --oneline origin/main..HEAD)"
     ]
   }
 }
