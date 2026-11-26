@@ -45,6 +45,19 @@ description: "I’m Dor Gez, a hydrologist and water engineer based in Israel. I
     margin-bottom: 1.5rem;
   }
 
+  /* Readable by Google and screen readers, not shown on screen */
+  .visually-hidden-text {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
   .typewriter-prefix {
     opacity: 0.6;
   }
@@ -227,9 +240,12 @@ description: "I’m Dor Gez, a hydrologist and water engineer based in Israel. I
   <h1 class="portfolio-name">Dor Gez</h1>
 
   <div class="typewriter-line">
-    <span class="typewriter-prefix">I'm a </span>
-    <span class="typewriter-text" id="typewriter">Water Engineer</span>
-    <span class="typewriter-cursor"></span>
+    <span class="visually-hidden-text">Water Engineer, Hydrologist, Data Scientist and Master Diver</span>
+    <span aria-hidden="true">
+      <span class="typewriter-prefix">I'm a </span>
+      <span class="typewriter-text" id="typewriter">Water Engineer</span>
+      <span class="typewriter-cursor"></span>
+    </span>
   </div>
 
   <div class="portfolio-buttons">
@@ -259,7 +275,7 @@ description: "I’m Dor Gez, a hydrologist and water engineer based in Israel. I
     var phrases = ['Water Engineer', 'Hydrologist', 'Data Scientist', 'Master Diver'];
     var el = document.getElementById('typewriter');
     var phraseIndex = 0;
-    var charIndex = phrases[0].length; // starts showing the first phrase (readable without JS)
+    var charIndex = phrases[0].length;
     var isDeleting = true;
     var typeSpeed = 100;
 
