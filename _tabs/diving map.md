@@ -12,6 +12,11 @@ order: 5
   font-display: swap;
 }
 
+/* ── Dark map tiles (OpenStreetMap darkened) ── */
+.osm-dark-tiles {
+  filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9) saturate(0.6);
+}
+
 /* ── Stats Dashboard ── */
 .dive-stats {
   display: grid;

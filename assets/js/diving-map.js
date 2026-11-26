@@ -23,13 +23,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* Tile layers */
-  var darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+  /* OpenStreetMap tiles (no API key). Dark mode reuses them, darkened by CSS (.osm-dark-tiles). */
+  var osmUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+  var osmAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+
+  var darkTiles = L.tileLayer(osmUrl, {
+    attribution: osmAttribution,
+    className: 'osm-dark-tiles',
     maxZoom: 19
   });
 
-  var lightTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+  var lightTiles = L.tileLayer(osmUrl, {
+    attribution: osmAttribution,
     maxZoom: 19
   });
 
