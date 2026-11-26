@@ -51,10 +51,14 @@
   {{ seo_tags }}
 
   <title>
-    {%- unless page.layout == 'home' or page.layout == 'posts' -%}
-      {{ page.title | append: ' | ' }}
-    {%- endunless -%}
-    {{ site.title }}
+    {%- if page.url == '/' and page.title -%}
+      {{ site.title }} – {{ page.title }}
+    {%- else -%}
+      {%- unless page.layout == 'home' or page.layout == 'posts' -%}
+        {{ page.title | append: ' | ' }}
+      {%- endunless -%}
+      {{ site.title }}
+    {%- endif -%}
   </title>
 
   {% include_cached favicons.html %}

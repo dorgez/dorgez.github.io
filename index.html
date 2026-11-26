@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Hydrologist & Data Scientist
+title: Hydrologist & Water Engineer
+description: "I’m Dor Gez, a hydrologist and water engineer based in Israel. I work as a hydrology consultant specializing in urban runoff and stormwater, and I use Python and machine learning to analyze rainfall, floods and extreme weather. Outside work I’m a master diver who has logged dives across four countries."
 ---
 <style>
   .portfolio-hero {
     text-align: center;
-    padding: 3rem 1rem;
-    min-height: 70vh;
+    padding: 2rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,8 +15,8 @@ title: Hydrologist & Data Scientist
   }
 
   .portfolio-avatar {
-    width: 400px;
-    height: 400px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #4385BE;
@@ -65,11 +65,66 @@ title: Hydrologist & Data Scientist
   }
 
   .portfolio-bio {
-    max-width: 520px;
+    max-width: 620px;
     font-size: 1.05rem;
     line-height: 1.7;
     opacity: 0.8;
-    margin-bottom: 2rem;
+    margin: 2rem auto 0;
+  }
+
+  /* ── Latest posts ── */
+  .latest-posts {
+    max-width: 760px;
+    margin: 1.5rem auto 2rem;
+    padding: 0 1rem;
+  }
+
+  .latest-posts-title {
+    font-family: 'Commit Mono', monospace;
+    font-size: 1.3rem;
+    font-weight: 700;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+  }
+
+  .latest-post-card {
+    display: block;
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 0.9rem;
+    text-decoration: none !important;
+    color: inherit !important;
+    transition: transform 0.2s ease;
+  }
+
+  .latest-post-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .latest-post-card h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.35rem;
+    color: #4385BE;
+  }
+
+  .latest-post-card p {
+    font-size: 0.95rem;
+    opacity: 0.75;
+    margin: 0 0 0.4rem;
+  }
+
+  .latest-post-meta {
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+
+  .latest-posts-all {
+    display: inline-block;
+    margin-top: 0.3rem;
+    font-family: 'Commit Mono', monospace;
+    font-size: 0.95rem;
   }
 
   .portfolio-buttons {
@@ -173,7 +228,7 @@ title: Hydrologist & Data Scientist
 
   <div class="typewriter-line">
     <span class="typewriter-prefix">I'm a </span>
-    <span class="typewriter-text" id="typewriter"></span>
+    <span class="typewriter-text" id="typewriter">Water Engineer</span>
     <span class="typewriter-cursor"></span>
   </div>
 
@@ -181,15 +236,31 @@ title: Hydrologist & Data Scientist
     <a href="/posts/" class="portfolio-btn portfolio-btn-primary">Explore My Posts</a>
     <a href="/about-me/" class="portfolio-btn portfolio-btn-secondary">About Me</a>
   </div>
+
+  <p class="portfolio-bio">
+    I’m Dor Gez, a hydrologist and water engineer based in Israel. I work as a hydrology consultant specializing in urban runoff and stormwater, and I use Python and machine learning to analyze rainfall, floods and extreme weather. Outside work I’m a master diver who has logged dives across four countries.
+  </p>
 </div>
+
+<section class="latest-posts">
+  <h2 class="latest-posts-title">Latest posts</h2>
+  {% for post in site.posts limit:3 %}
+    <a class="latest-post-card" href="{{ post.url | relative_url }}">
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.description | default: post.excerpt | strip_html | normalize_whitespace | truncate: 150 }}</p>
+      <span class="latest-post-meta">{{ post.date | date: '%b %-d, %Y' }}{% if post.categories.size > 0 %} · {{ post.categories | first }}{% endif %}</span>
+    </a>
+  {% endfor %}
+  <a class="latest-posts-all" href="/posts/">All posts →</a>
+</section>
 
 <script>
   (function () {
     var phrases = ['Water Engineer', 'Hydrologist', 'Data Scientist', 'Master Diver'];
     var el = document.getElementById('typewriter');
     var phraseIndex = 0;
-    var charIndex = 0;
-    var isDeleting = false;
+    var charIndex = phrases[0].length; // starts showing the first phrase (readable without JS)
+    var isDeleting = true;
     var typeSpeed = 100;
 
     function type() {
@@ -217,6 +288,6 @@ title: Hydrologist & Data Scientist
       setTimeout(type, typeSpeed);
     }
 
-    type();
+    setTimeout(type, 2000);
   })();
 </script>

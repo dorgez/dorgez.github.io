@@ -1,3 +1,5 @@
 tabs:
   home: Portfolio
 meta: ""
+layout:
+  default: Dor Gez # mobile top bar title on the homepage (was showing "Default")
